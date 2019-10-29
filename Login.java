@@ -54,9 +54,12 @@ public class Login {
 			String passWord = pass.getText();
 			
 			if (userName.compareTo(passWord)==0) {
-				JFrame ticketFrame = new JFrame();
-				ticketFrame.setSize(500, 300);
-				ticketFrame.setVisible(true);
+				//JFrame ticketFrame = new JFrame();
+				//ticketFrame.setSize(500, 300);
+				//ticketFrame.setVisible(true);
+                                frame.remove(panel);
+                                frame.repaint();
+                                frame.revalidate();
 			}
 		});
 		
