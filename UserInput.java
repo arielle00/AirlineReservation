@@ -1,4 +1,3 @@
-
 import javax.swing.*;
 
 /**
@@ -10,6 +9,8 @@ public class UserInput {
     public JPanel inputPanel() {
         JPanel userInputPanel = new JPanel();
         userInputPanel.setLayout(null);
+        
+        
         JLabel tOrigin = new JLabel("From ");
         tOrigin.setBounds(20, 20, 150, 21);
         JLabel tDestination = new JLabel("To ");
@@ -53,4 +54,13 @@ public class UserInput {
 
         return userInputPanel;
     }
+    public void setFromName(String From) {
+    	
+    }
+    public void setToName(String To) {
+    	
+    }
+    
+    
+    
 }
