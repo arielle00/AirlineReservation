@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class SelectFlight {
-	static UserInput object = new UserInput();
+	static UserDetails object = new UserDetails();
 	
 	public SelectFlight() throws IOException {
 
@@ -75,45 +75,38 @@ public class SelectFlight {
 		
 		
 		Dflight1.addActionListener(event -> {
-			object.setFromName("SFO");
-			object.setToName("LAX");
-			panel2.add(object.inputPanel());
-			
+			object.setFrom("SFO");
+			object.setTo("LAX");
+			object.setTime("4:00 PM");
+					
 		});
 		
 		Dflight2.addActionListener(event -> {
-			object.setFromName("LAX");
-			object.setToName("SFO");
+			
 		});
 		
 		Dflight3.addActionListener(event -> {
-			object.setFromName("OAK");
-			object.setToName("SNA");
+		
 		});
 		
 		Dflight4.addActionListener(event -> {
-			object.setFromName("SNA");
-			object.setToName("OAK");
+			
 		});
 //---------------------------------------------------------------
 		Iflight5.addActionListener(event -> {
-			object.setFromName("MAD");
-			object.setToName("LAX");
+			
 		});
 		
 		Iflight6.addActionListener(event -> {
-			object.setFromName("LAX");
-			object.setToName("MAD");
+			
 		});
 		
 		Iflight7.addActionListener(event -> {
-			object.setFromName("EWR");
-			object.setToName("DXB");
+			
 		});
 		
 		Iflight8.addActionListener(event -> {
-			object.setFromName("DBX");
-			object.setToName("EWR");
+			
 		});
 		
 		
@@ -124,8 +117,6 @@ public class SelectFlight {
 		
 	}
 	
-	public UserInput makePanel() {
-		return object;
-	}
+
 	
 }
