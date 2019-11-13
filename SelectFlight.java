@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class SelectFlight {
+	static UserInput object = new UserInput();
 	
 	public SelectFlight() throws IOException {
 
@@ -72,10 +73,59 @@ public class SelectFlight {
 		panel2.setBackground(Color.GRAY);
 	
 		
+		
+		Dflight1.addActionListener(event -> {
+			object.setFromName("SFO");
+			object.setToName("LAX");
+			panel2.add(object.inputPanel());
+			
+		});
+		
+		Dflight2.addActionListener(event -> {
+			object.setFromName("LAX");
+			object.setToName("SFO");
+		});
+		
+		Dflight3.addActionListener(event -> {
+			object.setFromName("OAK");
+			object.setToName("SNA");
+		});
+		
+		Dflight4.addActionListener(event -> {
+			object.setFromName("SNA");
+			object.setToName("OAK");
+		});
+//---------------------------------------------------------------
+		Iflight5.addActionListener(event -> {
+			object.setFromName("MAD");
+			object.setToName("LAX");
+		});
+		
+		Iflight6.addActionListener(event -> {
+			object.setFromName("LAX");
+			object.setToName("MAD");
+		});
+		
+		Iflight7.addActionListener(event -> {
+			object.setFromName("EWR");
+			object.setToName("DXB");
+		});
+		
+		Iflight8.addActionListener(event -> {
+			object.setFromName("DBX");
+			object.setToName("EWR");
+		});
+		
+		
+		
+		
 		return panel2;
 		
 		
 	}
 	
+	public UserInput makePanel() {
+		return object;
+	}
 	
 }
