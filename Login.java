@@ -24,8 +24,8 @@ public class Login {
 		JFrame frame = new JFrame();
 		frame.setSize(500, 300);
 		
-		JPanel panel = new JPanel();
-		panel.setLayout(null);
+//		JPanel panel = new JPanel();
+//		panel.setLayout(null);
 		
 		JLabel title = new JLabel("Airline Reservation");
 		title.setFont(title.getFont().deriveFont(30.0f));
