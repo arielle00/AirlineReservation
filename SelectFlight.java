@@ -110,22 +110,34 @@ public class SelectFlight extends UserDetails{
 		});
 //---------------------------------------------------------------
 		Iflight5.addActionListener(event -> {
-            Login.addUserInputPanel();
+			uD.setFrom("MAD");
+			uD.setTo("LAX");
+			uD.setTime("4:00 PM");
+			Login.addUserInputPanel();
 			
 		});
 		
 		Iflight6.addActionListener(event -> {
-            Login.addUserInputPanel();
+			uD.setFrom("LAX");
+			uD.setTo("MAD");
+			uD.setTime("10:00 PM");
+			Login.addUserInputPanel();
 			
 		});
 		
 		Iflight7.addActionListener(event -> {
-            Login.addUserInputPanel();
+			uD.setFrom("EWR");
+			uD.setTo("DXB");
+			uD.setTime("11:00 AM");
+			Login.addUserInputPanel();
 			
 		});
 		
 		Iflight8.addActionListener(event -> {
-            Login.addUserInputPanel();
+			uD.setFrom("DXB");
+			uD.setTo("EWR");
+			uD.setTime("2:00 PM");
+			Login.addUserInputPanel();
 			
 		});
 		

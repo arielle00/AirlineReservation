@@ -16,13 +16,13 @@ public class UserInput extends UserDetails {
         userInputPanel.setBackground(Color.GRAY);
         
         
-        JLabel tOrigin = new JLabel("From ");
+        JLabel tOrigin = new JLabel("From: ");
         tOrigin.setBounds(20, 20, 150, 21);
         
         JLabel From = new JLabel(uD.getFrom());
         From.setBounds(70,20,150,21);
         
-        JLabel tDestination = new JLabel("To ");
+        JLabel tDestination = new JLabel("To: ");
         tDestination.setBounds(20, 70, 150, 21);
         
         JLabel To = new JLabel(uD.getTo());
