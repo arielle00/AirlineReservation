@@ -22,6 +22,7 @@ public class Login {
         static JFrame frame = new JFrame();
         static SelectFlight object = null;
         static UserInput uI = new UserInput();
+        static UserDetails uD = new UserDetails();
         
 	public static void main(String[] args) throws IOException {
 		//JFrame frame = new JFrame();
@@ -74,7 +75,7 @@ public class Login {
 					e.printStackTrace();
 				}
 				try {
-					frame.add(object.makeButtons());
+					frame.add(object.makeButtons(uD));
 				} catch (IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -100,7 +101,7 @@ public class Login {
     public static void addUserInputPanel() 
     {
         frame.getContentPane().removeAll();
-        frame.add(uI.inputPanel());
+        frame.add(uI.inputPanel(uD));
         frame.setSize(560, 420);
         frame.repaint();
         frame.revalidate();

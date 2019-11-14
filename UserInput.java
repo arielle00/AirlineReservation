@@ -5,13 +5,13 @@ import javax.swing.*;
  *
  * @author abhis
  */
-public class UserInput {
+public class UserInput extends UserDetails {
 
     String[] nos = { "1", "2", "3", "4", "5","6" };
-    UserDetails object = new UserDetails();
     
-    public JPanel inputPanel() {
-        JPanel userInputPanel = new JPanel();
+    
+    public JPanel inputPanel(UserDetails uD) {
+    	JPanel userInputPanel = new JPanel();
         userInputPanel.setLayout(null);
         userInputPanel.setBackground(Color.GRAY);
         
@@ -19,12 +19,15 @@ public class UserInput {
         JLabel tOrigin = new JLabel("From ");
         tOrigin.setBounds(20, 20, 150, 21);
         
-        JLabel From = new JLabel(object.getFrom());
-        System.out.println(object.getFrom());
+        JLabel From = new JLabel(uD.getFrom());
         From.setBounds(70,20,150,21);
         
         JLabel tDestination = new JLabel("To ");
         tDestination.setBounds(20, 70, 150, 21);
+        
+        JLabel To = new JLabel(uD.getTo());
+        To.setBounds(70,70,150,21);
+        
         JLabel tName = new JLabel("Name ");
         tName.setBounds(20, 120, 150, 21);
         JLabel tDate = new JLabel("Date ");
@@ -65,6 +68,7 @@ public class UserInput {
         userInputPanel.add(tOrigin);
         userInputPanel.add(From);
         userInputPanel.add(tDestination);
+        userInputPanel.add(To);
         userInputPanel.add(tName);
         userInputPanel.add(tDate);
         userInputPanel.add(tClass);

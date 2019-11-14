@@ -11,13 +11,15 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 public class SelectFlight extends UserDetails{
-	static UserDetails object = new UserDetails();
+	static UserDetails uD = new UserDetails();
+	UserInput uI = new UserInput();
+	
 	
 	public SelectFlight() throws IOException {
 
 	}
 
-	public static JPanel makeButtons() throws IOException {
+	public static JPanel makeButtons(UserDetails uD) throws IOException {
 		
 		String f1 = ("SFO -> LAX, 4:00pm, $110");
 		String f2 = ("LAX -> SFO, 10:00pm, $90");
@@ -75,27 +77,35 @@ public class SelectFlight extends UserDetails{
 		
 		
 		Dflight1.addActionListener(event -> {
-			object.setFrom("SFO");
-			object.setTo("LAX");
-			object.setTime("4:00 PM");
+			uD.setFrom("SFO");
+			uD.setTo("LAX");
+			uD.setTime("4:00 PM");
             Login.addUserInputPanel();
 		});
-		 System.out.println(object.getFrom());
+		 
+		
+		
 		Dflight2.addActionListener(event -> {
-			object.setFrom("LAX");
-			object.setTo("SFO");
-			object.setTime("4:00 PM");
+			uD.setFrom("LAX");
+			uD.setTo("SFO");
+			uD.setTime("10:00 PM");
 			Login.addUserInputPanel();
 			
 		});
 		
 		Dflight3.addActionListener(event -> {
-            Login.addUserInputPanel();
+			uD.setFrom("OAK");
+			uD.setTo("SNA");
+			uD.setTime("11:00 AM");
+			Login.addUserInputPanel();
 		
 		});
 		
 		Dflight4.addActionListener(event -> {
-            Login.addUserInputPanel();
+			uD.setFrom("SNA");
+			uD.setTo("OAK");
+			uD.setTime("2:00 PM");
+			Login.addUserInputPanel();
 			
 		});
 //---------------------------------------------------------------
