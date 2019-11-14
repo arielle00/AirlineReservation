@@ -10,7 +10,7 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class SelectFlight {
+public class SelectFlight extends UserDetails{
 	static UserDetails object = new UserDetails();
 	
 	public SelectFlight() throws IOException {
@@ -78,41 +78,44 @@ public class SelectFlight {
 			object.setFrom("SFO");
 			object.setTo("LAX");
 			object.setTime("4:00 PM");
-                        Login.addUserInputPanel();
+            Login.addUserInputPanel();
 		});
-		
+		 System.out.println(object.getFrom());
 		Dflight2.addActionListener(event -> {
-                    Login.addUserInputPanel();
+			object.setFrom("LAX");
+			object.setTo("SFO");
+			object.setTime("4:00 PM");
+			Login.addUserInputPanel();
 			
 		});
 		
 		Dflight3.addActionListener(event -> {
-                    Login.addUserInputPanel();
+            Login.addUserInputPanel();
 		
 		});
 		
 		Dflight4.addActionListener(event -> {
-                    Login.addUserInputPanel();
+            Login.addUserInputPanel();
 			
 		});
 //---------------------------------------------------------------
 		Iflight5.addActionListener(event -> {
-                    Login.addUserInputPanel();
+            Login.addUserInputPanel();
 			
 		});
 		
 		Iflight6.addActionListener(event -> {
-                    Login.addUserInputPanel();
+            Login.addUserInputPanel();
 			
 		});
 		
 		Iflight7.addActionListener(event -> {
-                    Login.addUserInputPanel();
+            Login.addUserInputPanel();
 			
 		});
 		
 		Iflight8.addActionListener(event -> {
-                    Login.addUserInputPanel();
+            Login.addUserInputPanel();
 			
 		});
 		

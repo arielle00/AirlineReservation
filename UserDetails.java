@@ -4,7 +4,7 @@ public class UserDetails {
 	private String name;
 	private String To;
 	private String From;
-	private Double Cost;
+	private int Cost;
 	private String Time;
 
 
@@ -32,11 +32,11 @@ public String getFrom() {
 	return From;
 }
 
-public void setCost(Double Cost) {
+public void setCost(int Cost) {
 	this.Cost = Cost;
 }
 
-public Double getCost() {
+public int getCost() {
 	return Cost;
 }
 
@@ -47,5 +47,6 @@ public void setTime(String Time) {
 public String getTime() {
 	return Time;
 }
+
 
 }
