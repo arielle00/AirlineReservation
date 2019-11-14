@@ -78,34 +78,41 @@ public class SelectFlight {
 			object.setFrom("SFO");
 			object.setTo("LAX");
 			object.setTime("4:00 PM");
-					
+                        Login.addUserInputPanel();
 		});
 		
 		Dflight2.addActionListener(event -> {
+                    Login.addUserInputPanel();
 			
 		});
 		
 		Dflight3.addActionListener(event -> {
+                    Login.addUserInputPanel();
 		
 		});
 		
 		Dflight4.addActionListener(event -> {
+                    Login.addUserInputPanel();
 			
 		});
 //---------------------------------------------------------------
 		Iflight5.addActionListener(event -> {
+                    Login.addUserInputPanel();
 			
 		});
 		
 		Iflight6.addActionListener(event -> {
+                    Login.addUserInputPanel();
 			
 		});
 		
 		Iflight7.addActionListener(event -> {
+                    Login.addUserInputPanel();
 			
 		});
 		
 		Iflight8.addActionListener(event -> {
+                    Login.addUserInputPanel();
 			
 		});
 		

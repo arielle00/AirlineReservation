@@ -19,9 +19,12 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 public class Login {
-
+        static JFrame frame = new JFrame();
+        static SelectFlight object = null;
+        static UserInput uI = new UserInput();
+        
 	public static void main(String[] args) throws IOException {
-		JFrame frame = new JFrame();
+		//JFrame frame = new JFrame();
 		frame.setSize(500, 300);
 		
 		JPanel panel = new JPanel();
@@ -60,10 +63,10 @@ public class Login {
 			
 			if (userName.compareTo(passWord)==0) {
 				frame.remove(panel);
+                                frame.setSize(500, 350);
 				frame.repaint();
 				frame.revalidate();
 
-				SelectFlight object = null;
 				try {
 					object = new SelectFlight();
 				} catch (IOException e) {
@@ -76,7 +79,7 @@ public class Login {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				frame.setVisible(true);
+				//frame.setVisible(true);
 				
 			}
 			
@@ -90,8 +93,17 @@ public class Login {
 		
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		panel.setBackground(Color.GRAY);
-	    frame.setVisible(true);
+                frame.setVisible(true);
 
 	}
 
+    public static void addUserInputPanel() 
+    {
+        frame.getContentPane().removeAll();
+        frame.add(uI.inputPanel());
+        frame.setSize(560, 420);
+        frame.repaint();
+        frame.revalidate();
+        frame.setVisible(true);
+    }
 }

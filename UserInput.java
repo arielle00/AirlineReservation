@@ -1,3 +1,4 @@
+import java.awt.*;
 import javax.swing.*;
 
 /**
@@ -6,9 +7,12 @@ import javax.swing.*;
  */
 public class UserInput {
 
+    String[] nos = { "1", "2", "3", "4", "5","6" };
+    
     public JPanel inputPanel() {
         JPanel userInputPanel = new JPanel();
         userInputPanel.setLayout(null);
+        userInputPanel.setBackground(Color.GRAY);
         
         
         JLabel tOrigin = new JLabel("From ");
@@ -37,6 +41,20 @@ public class UserInput {
         tChildren.setBounds(350, 70, 150, 21);
         JLabel tInfants = new JLabel("Infants(Under 2) ");
         tInfants.setBounds(350, 120, 150, 21);
+        
+        JComboBox audList = new JComboBox(nos);
+        audList.setBounds(450, 20, 70, 21);
+        
+        JComboBox childList = new JComboBox(nos);
+        childList.setBounds(450, 70, 70, 21);
+        
+        JComboBox infList = new JComboBox(nos);
+        infList.setBounds(450, 120, 70, 21);
+        
+        findFlight.addActionListener(event -> 
+		{
+                    //int i = Integer.parseInt((String) audList.getSelectedItem());
+                });
 
         userInputPanel.add(tOrigin);
         userInputPanel.add(tDestination);
@@ -51,16 +69,10 @@ public class UserInput {
         userInputPanel.add(tAdults);
         userInputPanel.add(tChildren);
         userInputPanel.add(tInfants);
+        userInputPanel.add(audList);
+        userInputPanel.add(childList);
+        userInputPanel.add(infList);
 
         return userInputPanel;
     }
-    public void setFromName(String From) {
-    	
-    }
-    public void setToName(String To) {
-    	
-    }
-    
-    
-    
 }
