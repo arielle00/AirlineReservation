@@ -23,6 +23,7 @@ public class Login {
         static SelectFlight object = null;
         static UserInput uI = new UserInput();
         static UserDetails uD = new UserDetails();
+        static Ticket tic = new Ticket();
         
 	public static void main(String[] args) throws IOException {
 		//JFrame frame = new JFrame();
@@ -96,6 +97,15 @@ public class Login {
 		panel.setBackground(Color.GRAY);
                 frame.setVisible(true);
 
+	}
+	
+	public static void addTicketPanel() {
+		frame.getContentPane().removeAll();
+		frame.add(tic.ticketPanel(uD));
+		frame.setSize(560, 420);
+        frame.repaint();
+        frame.revalidate();
+        frame.setVisible(true);
 	}
 
     public static void addUserInputPanel() 

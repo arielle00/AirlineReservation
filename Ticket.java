@@ -8,7 +8,7 @@ import javax.swing.JPanel;
 //Needs work
 public class Ticket {
 
-	public JPanel ticketPanel() {
+	public JPanel ticketPanel(UserDetails uD) {
 		
 		JPanel panel3 = new JPanel();
 		panel3.setLayout(null);

@@ -62,7 +62,7 @@ public class UserInput extends UserDetails {
         
         findFlight.addActionListener(event -> 
 		{
-                    //int i = Integer.parseInt((String) audList.getSelectedItem());
+			Login.addTicketPanel();
                 });
 
         userInputPanel.add(tOrigin);
