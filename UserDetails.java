@@ -6,6 +6,7 @@ public class UserDetails {
 	private String From;
 	private int Cost;
 	private String Time;
+	private String PassName;
 
 
 public void setName(String name) {
@@ -46,6 +47,14 @@ public void setTime(String Time) {
 
 public String getTime() {
 	return Time;
+}
+
+public void setPassName(String PassName) {
+	this.PassName = PassName;
+}
+
+public String getPassName() {
+	return PassName;
 }
 
 
