@@ -30,10 +30,10 @@ public class UserInput extends UserDetails {
         
         JLabel tName = new JLabel("Passenger Name:");
         tName.setBounds(20, 120, 150, 21);
-        JLabel tDate = new JLabel("Date:");
+        JLabel tDate = new JLabel("Date: (01-01-2000)");
         tDate.setBounds(20, 170, 150, 21);
-        JLabel tContact = new JLabel("Contact #:");
-        tContact.setBounds(20, 270, 150, 21);
+        JLabel tContact = new JLabel("Contact #: (888-888-8888)");
+        tContact.setBounds(20, 270, 200, 21);
         JButton findFlight = new JButton("Find Flight");
         findFlight.setBounds(20, 320, 100, 25);
         
@@ -46,7 +46,7 @@ public class UserInput extends UserDetails {
 
         
         JTextField tContactField = new JTextField(15);
-        tContactField.setBounds(150, 270, 150, 21);
+        tContactField.setBounds(200, 270, 150, 21);
         
         
         JLabel tAdults = new JLabel("Adults(12+) ");
@@ -58,18 +58,21 @@ public class UserInput extends UserDetails {
         
         JComboBox audList = new JComboBox(nos);
         audList.setBounds(450, 20, 70, 21);
+        uD.setAdult(audList.getSelectedItem().toString());
         
         JComboBox childList = new JComboBox(nos);
         childList.setBounds(450, 70, 70, 21);
+        uD.setChild(childList.getSelectedItem().toString());
         
         JComboBox infList = new JComboBox(nos);
         infList.setBounds(450, 120, 70, 21);
+        uD.setInf(infList.getSelectedItem().toString());
         
         findFlight.addActionListener(event -> 
 		{
 			uD.setName(tNameField.getText());
 			uD.setDate(tDateField.getText());
-			uD.setDate(tContactField.getText());
+			uD.setPhone(tContactField.getText());
 			Login.addTicketPanel();
         });
 

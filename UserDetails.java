@@ -10,6 +10,27 @@ public class UserDetails {
 	private String PassName;
 	private String date;
 	private String phone;
+	private String adult,infant,child;
+	
+public void setAdult(String adult) {
+	this.adult = adult;
+}
+public String getAdult() {
+	return adult;
+}
+
+public void setChild(String child) {
+	this.child = child;
+}
+public String getChild() {
+	return child;
+}
+public void setInf(String infant) {
+	this.infant = infant;
+}
+public String getInf() {
+	return infant;
+}
 
 public void setUserName(String username) {
 	this.username = username;
