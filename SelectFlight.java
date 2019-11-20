@@ -80,6 +80,7 @@ public class SelectFlight extends UserDetails{
 			uD.setFrom("SFO");
 			uD.setTo("LAX");
 			uD.setTime("4:00 PM");
+			uD.setCost("$110");
             Login.addUserInputPanel();
 		});
 		 
@@ -89,6 +90,7 @@ public class SelectFlight extends UserDetails{
 			uD.setFrom("LAX");
 			uD.setTo("SFO");
 			uD.setTime("10:00 PM");
+			uD.setCost("$90");
 			Login.addUserInputPanel();
 			
 		});
@@ -97,6 +99,7 @@ public class SelectFlight extends UserDetails{
 			uD.setFrom("OAK");
 			uD.setTo("SNA");
 			uD.setTime("11:00 AM");
+			uD.setCost("$120");
 			Login.addUserInputPanel();
 		
 		});
@@ -105,6 +108,7 @@ public class SelectFlight extends UserDetails{
 			uD.setFrom("SNA");
 			uD.setTo("OAK");
 			uD.setTime("2:00 PM");
+			uD.setCost("$130");
 			Login.addUserInputPanel();
 			
 		});
@@ -113,6 +117,7 @@ public class SelectFlight extends UserDetails{
 			uD.setFrom("MAD");
 			uD.setTo("LAX");
 			uD.setTime("4:00 PM");
+			uD.setCost("$340");
 			Login.addUserInputPanel();
 			
 		});
@@ -121,6 +126,7 @@ public class SelectFlight extends UserDetails{
 			uD.setFrom("LAX");
 			uD.setTo("MAD");
 			uD.setTime("10:00 PM");
+			uD.setCost("$320");
 			Login.addUserInputPanel();
 			
 		});
@@ -129,6 +135,7 @@ public class SelectFlight extends UserDetails{
 			uD.setFrom("EWR");
 			uD.setTo("DXB");
 			uD.setTime("11:00 AM");
+			uD.setCost("$120");
 			Login.addUserInputPanel();
 			
 		});
@@ -137,6 +144,7 @@ public class SelectFlight extends UserDetails{
 			uD.setFrom("DXB");
 			uD.setTo("EWR");
 			uD.setTime("2:00 PM");
+			uD.setCost("$130");
 			Login.addUserInputPanel();
 			
 		});

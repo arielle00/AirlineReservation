@@ -15,7 +15,7 @@ public class UserInput extends UserDetails {
         userInputPanel.setLayout(null);
         userInputPanel.setBackground(Color.GRAY);
         
-        
+         
         JLabel tOrigin = new JLabel("From: ");
         tOrigin.setBounds(20, 20, 150, 21);
         
@@ -32,8 +32,6 @@ public class UserInput extends UserDetails {
         tName.setBounds(20, 120, 150, 21);
         JLabel tDate = new JLabel("Date:");
         tDate.setBounds(20, 170, 150, 21);
-//        JLabel tClass = new JLabel("Class ");
-//        tClass.setBounds(20, 220, 150, 21);
         JLabel tContact = new JLabel("Contact #:");
         tContact.setBounds(20, 270, 150, 21);
         JButton findFlight = new JButton("Find Flight");
@@ -41,18 +39,15 @@ public class UserInput extends UserDetails {
         
         JTextField tNameField = new JTextField(15);
         tNameField.setBounds(150, 120, 150, 21);
-        String passName = tNameField.getText();
-        System.out.println(tNameField.getText());
-        uD.setName(passName);
-//        System.out.println(uD.getName());
+       
+        
         JTextField tDateField = new JTextField(15);
         tDateField.setBounds(150, 170, 150, 21);
-        String date = tDateField.getText();
-        uD.setDate(date);
+
+        
         JTextField tContactField = new JTextField(15);
         tContactField.setBounds(150, 270, 150, 21);
-        String phone = tContactField.getText();
-        uD.setDate(phone);
+        
         
         JLabel tAdults = new JLabel("Adults(12+) ");
         tAdults.setBounds(350, 20, 150, 21);
@@ -72,8 +67,11 @@ public class UserInput extends UserDetails {
         
         findFlight.addActionListener(event -> 
 		{
+			uD.setName(tNameField.getText());
+			uD.setDate(tDateField.getText());
+			uD.setDate(tContactField.getText());
 			Login.addTicketPanel();
-                });
+        });
 
         userInputPanel.add(tOrigin);
         userInputPanel.add(From);

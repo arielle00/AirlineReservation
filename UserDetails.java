@@ -1,15 +1,24 @@
 
 public class UserDetails {
 	
+	private String username;
 	private String name;
 	private String To;
 	private String From;
-	private int Cost;
+	private String Cost;
 	private String Time;
 	private String PassName;
 	private String date;
 	private String phone;
 
+public void setUserName(String username) {
+	this.username = username;
+}
+
+public String getUserName() {
+	return username;
+}
+	
 public void setDate(String date) {
 	this.date = date;
 }
@@ -50,11 +59,11 @@ public String getFrom() {
 	return From;
 }
 
-public void setCost(int Cost) {
+public void setCost(String Cost) {
 	this.Cost = Cost;
 }
 
-public int getCost() {
+public String getCost() {
 	return Cost;
 }
 

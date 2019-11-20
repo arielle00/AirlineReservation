@@ -64,10 +64,12 @@ public class Login {
 			String passWord = pass.getText();
 			
 			if (userName.compareTo(passWord)==0) {
+				uD.setUserName(userName);
 				frame.remove(panel);
-                                frame.setSize(500, 350);
+                frame.setSize(500, 350);
 				frame.repaint();
 				frame.revalidate();
+				
 
 				try {
 					object = new SelectFlight();
