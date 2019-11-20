@@ -12,12 +12,13 @@ public class Ticket {
 		
 		JPanel panel3 = new JPanel();
 		panel3.setLayout(null);
-		
+	
 		JLabel Title = new JLabel("Airline Reservation Ticket");
 		Title.setFont(Title.getFont().deriveFont(30.0f));
 		JLabel From = new JLabel("From:");
 		JLabel To = new JLabel("To:");
-		JLabel BookDate = new JLabel("Login:");
+		JLabel PassName = new JLabel("Passanger Name:");
+		JLabel name = new JLabel(uD.getName());
 		JLabel Price = new JLabel("Price:");
 		JLabel Time = new JLabel("To:");
 		JLabel AdultsNo = new JLabel("Adults:");
@@ -30,7 +31,8 @@ public class Ticket {
 		Title.setBounds(100,15,500,45);
 		From.setBounds(20,80,300,20);
 		To.setBounds(20,125,300,20);
-		BookDate.setBounds(20,200,300,20);
+		PassName.setBounds(20,200,300,20);
+		name.setBounds(200,200,300,20);
 		Price.setBounds(20,250,300,20);
 		Time.setBounds(20,280,300,20);
 		AdultsNo.setBounds(20,320,300,20);
@@ -43,7 +45,8 @@ public class Ticket {
 		panel3.add(Title);
 		panel3.add(From);
 		panel3.add(To);
-		panel3.add(BookDate);
+		panel3.add(PassName);
+		panel3.add(name);
 		panel3.add(AdultsNo);
 		panel3.add(ChildrenNo);
 		panel3.add(InfantNo);

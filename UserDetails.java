@@ -7,8 +7,25 @@ public class UserDetails {
 	private int Cost;
 	private String Time;
 	private String PassName;
+	private String date;
+	private String phone;
 
+public void setDate(String date) {
+	this.date = date;
+}
 
+public String getDate() {
+	return date;
+}
+
+public void setPhone(String phone) {
+	this.phone = phone;
+}
+
+public String getPhone() {
+	return phone;
+}
+	
 public void setName(String name) {
 	this.name = name;
 }

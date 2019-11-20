@@ -38,12 +38,22 @@ public class UserInput extends UserDetails {
         tContact.setBounds(20, 270, 150, 21);
         JButton findFlight = new JButton("Find Flight");
         findFlight.setBounds(20, 320, 100, 25);
+        
         JTextField tNameField = new JTextField(15);
         tNameField.setBounds(150, 120, 150, 21);
+        String passName = tNameField.getText();
+        System.out.println(tNameField.getText());
+        uD.setName(passName);
+//        System.out.println(uD.getName());
         JTextField tDateField = new JTextField(15);
         tDateField.setBounds(150, 170, 150, 21);
+        String date = tDateField.getText();
+        uD.setDate(date);
         JTextField tContactField = new JTextField(15);
         tContactField.setBounds(150, 270, 150, 21);
+        String phone = tContactField.getText();
+        uD.setDate(phone);
+        
         JLabel tAdults = new JLabel("Adults(12+) ");
         tAdults.setBounds(350, 20, 150, 21);
         JLabel tChildren = new JLabel("Children(2-11) ");
