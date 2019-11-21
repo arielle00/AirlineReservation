@@ -99,14 +99,14 @@ public class Login {
 
 	}
 	
-	public static void addTicketPanel() {
-		frame.getContentPane().removeAll();
-		frame.add(tic.ticketPanel(uD));
-		frame.setSize(560, 420);
+	   public static void addTicketPanel() {
+        frame.getContentPane().removeAll();
+        frame.add(tic.ticketPanel(uD));
+        frame.setSize(560, 420);
         frame.repaint();
         frame.revalidate();
         frame.setVisible(true);
-	}
+    }
 
     public static void addUserInputPanel() 
     {
