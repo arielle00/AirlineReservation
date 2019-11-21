@@ -1,15 +1,45 @@
 
 public class UserDetails {
 	
+	private String username;
 	private String name;
 	private String To;
 	private String From;
-	private int Cost;
+	private String Cost;
 	private String Time;
 	private String PassName;
 	private String date;
 	private String phone;
+	private String adult,infant,child;
+	
+public void setAdult(String adult) {
+	this.adult = adult;
+}
+public String getAdult() {
+	return adult;
+}
 
+public void setChild(String child) {
+	this.child = child;
+}
+public String getChild() {
+	return child;
+}
+public void setInf(String infant) {
+	this.infant = infant;
+}
+public String getInf() {
+	return infant;
+}
+
+public void setUserName(String username) {
+	this.username = username;
+}
+
+public String getUserName() {
+	return username;
+}
+	
 public void setDate(String date) {
 	this.date = date;
 }
@@ -50,11 +80,11 @@ public String getFrom() {
 	return From;
 }
 
-public void setCost(int Cost) {
+public void setCost(String Cost) {
 	this.Cost = Cost;
 }
 
-public int getCost() {
+public String getCost() {
 	return Cost;
 }
 

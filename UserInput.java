@@ -15,7 +15,7 @@ public class UserInput extends UserDetails {
         userInputPanel.setLayout(null);
         userInputPanel.setBackground(Color.GRAY);
         
-        
+         
         JLabel tOrigin = new JLabel("From: ");
         tOrigin.setBounds(20, 20, 150, 21);
         
@@ -30,29 +30,24 @@ public class UserInput extends UserDetails {
         
         JLabel tName = new JLabel("Passenger Name:");
         tName.setBounds(20, 120, 150, 21);
-        JLabel tDate = new JLabel("Date:");
+        JLabel tDate = new JLabel("Date: (01-01-2000)");
         tDate.setBounds(20, 170, 150, 21);
-//        JLabel tClass = new JLabel("Class ");
-//        tClass.setBounds(20, 220, 150, 21);
-        JLabel tContact = new JLabel("Contact #:");
-        tContact.setBounds(20, 270, 150, 21);
+        JLabel tContact = new JLabel("Contact #: (888-888-8888)");
+        tContact.setBounds(20, 270, 200, 21);
         JButton findFlight = new JButton("Find Flight");
         findFlight.setBounds(20, 320, 100, 25);
         
         JTextField tNameField = new JTextField(15);
         tNameField.setBounds(150, 120, 150, 21);
-        String passName = tNameField.getText();
-        System.out.println(tNameField.getText());
-        uD.setName(passName);
-//        System.out.println(uD.getName());
+       
+        
         JTextField tDateField = new JTextField(15);
         tDateField.setBounds(150, 170, 150, 21);
-        String date = tDateField.getText();
-        uD.setDate(date);
+
+        
         JTextField tContactField = new JTextField(15);
-        tContactField.setBounds(150, 270, 150, 21);
-        String phone = tContactField.getText();
-        uD.setDate(phone);
+        tContactField.setBounds(200, 270, 150, 21);
+        
         
         JLabel tAdults = new JLabel("Adults(12+) ");
         tAdults.setBounds(350, 20, 150, 21);
@@ -63,17 +58,23 @@ public class UserInput extends UserDetails {
         
         JComboBox audList = new JComboBox(nos);
         audList.setBounds(450, 20, 70, 21);
+        uD.setAdult(audList.getSelectedItem().toString());
         
         JComboBox childList = new JComboBox(nos);
         childList.setBounds(450, 70, 70, 21);
+        uD.setChild(childList.getSelectedItem().toString());
         
         JComboBox infList = new JComboBox(nos);
         infList.setBounds(450, 120, 70, 21);
+        uD.setInf(infList.getSelectedItem().toString());
         
         findFlight.addActionListener(event -> 
 		{
+			uD.setName(tNameField.getText());
+			uD.setDate(tDateField.getText());
+			uD.setPhone(tContactField.getText());
 			Login.addTicketPanel();
-                });
+        });
 
         userInputPanel.add(tOrigin);
         userInputPanel.add(From);

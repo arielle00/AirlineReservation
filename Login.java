@@ -15,6 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
@@ -39,7 +40,8 @@ public class Login {
 		JButton enter = new JButton("Login");
 		
 		JTextField user = new JTextField(15);
-		JTextField pass = new JTextField(15);
+		JPasswordField pass = new JPasswordField(15);
+		pass.setEchoChar('*');
 	
 		title.setBounds(85, 10, 300, 100);
 		username.setBounds(100, 100, 150, 21);
@@ -64,10 +66,12 @@ public class Login {
 			String passWord = pass.getText();
 			
 			if (userName.compareTo(passWord)==0) {
+				uD.setUserName(userName);
 				frame.remove(panel);
-                                frame.setSize(500, 350);
+                frame.setSize(500, 350);
 				frame.repaint();
 				frame.revalidate();
+				
 
 				try {
 					object = new SelectFlight();
