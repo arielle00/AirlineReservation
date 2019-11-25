@@ -8,7 +8,7 @@ import javax.swing.*;
  */
 public class UserInput extends UserDetails {
 
-    String[] nos = {"1", "2", "3", "4", "5", "6"};
+    String[] nos = {"0", "1", "2", "3", "4", "5", "6"};
 
     public JPanel inputPanel(UserDetails uD) {
         JPanel userInputPanel = new JPanel();
@@ -69,6 +69,11 @@ public class UserInput extends UserDetails {
             uD.setAdult(audList.getSelectedItem().toString());
             uD.setChild(childList.getSelectedItem().toString());
             uD.setInf(infList.getSelectedItem().toString());
+            int tempCost = Integer.parseInt(uD.getCost().substring(1));
+            tempCost = tempCost*Integer.parseInt(uD.getAdult()) 
+                    + tempCost*Integer.parseInt(uD.getChild());
+            String tempStr = ("$" + String.valueOf(tempCost));
+            uD.setCost(tempStr);
             Login.addTicketPanel();
         });
 
