@@ -60,11 +60,11 @@ public class Ticket {
 		Time.setBounds(20,275,300,20);
 		time.setBounds(75,275,300,20);
 		AdultsNo.setBounds(20,300,300,20);
-		adult.setBounds(80,300,300,20);
+		adult.setBounds(90,300,300,20);
 		ChildrenNo.setBounds(20,325,300,20);
-		child.setBounds(80,325,300,20);
+		child.setBounds(90,325,300,20);
 		InfantNo.setBounds(20,350,300,20); 
-		inf.setBounds(80,350,300,20);
+		inf.setBounds(90,350,300,20);
 		TicketNo.setBounds(320,80,300,20);
 		ticket.setBounds(425,80,300,20);
 		BookedBy.setBounds(320,125,300,20);
